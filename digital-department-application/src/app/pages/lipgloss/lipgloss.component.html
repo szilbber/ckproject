@@ -42,11 +42,7 @@
 
             <button type="submit" [disabled]="myForm.invalid">Отправить</button>
         </form>
-        <!-- <div class="changes">
-            <div style="margin-bottom: 5px;">Введите номер продукта для изменения: </div>
-            <input name="numberToChange" id="numberToChange"/> 
-            <button (click)="changeObject(numberToChange)">Изменить</button>
-        </div> -->
+        
         <div class="changes">
             <div style="margin-bottom: 5px;">Введите номер продукта для изменения: </div>
             <input type="number" [(ngModel)]="numberToChange">

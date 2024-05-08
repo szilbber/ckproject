@@ -42,12 +42,19 @@
 
             <button type="submit" [disabled]="myForm.invalid">Отправить</button>
         </form>
+        <div class="changes">
+            <div style="margin-bottom: 5px;">Введите номер продукта для изменения: </div>
+            <input type="number" [(ngModel)]="numberToChange">
+            <button (click)="changeObject()">Изменить</button>
+
+        </div>
     </div>
     <div>
         <h3>Тени для век:</h3>
 
         <table border="1px" cellpadding="5" >
             <tr>
+                <th>№</th>
                 <th>Брэнд</th>
                 <th>Оттенок</th>
                 <th>Сегмент</th>
@@ -55,6 +62,7 @@
                 <th>Серийный номер</th>
             </tr>
             <tr *ngFor="let shadow of shadows">
+                <td>{{shadow.number}}</td>
                 <td>{{shadow.brand}}</td>
                 <td>{{shadow.color}}</td>
                 <td>{{shadow.segmentControl}}</td>
