@@ -1,14 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { OnChanges } from '@angular/core';
-import { SimpleChanges } from '@angular/core';
-import { DoCheck } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import{Routes} from '@angular/router';
-import { RouterOutlet,RouterLink} from "@angular/router";
-
-import { ItalicDirective } from './pages/home/italic.directive'; 
 
 
 @Component({
