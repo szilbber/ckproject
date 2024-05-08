@@ -3,7 +3,7 @@
 }
 
 .name {
-    margin-left: 120px;
+    margin-left: 90px;
     background-color: rgb(224, 133, 133);
     width: 300px;
     height: 250px;
@@ -15,7 +15,7 @@
 }
 
 .photos{
-    width: 300px;
+    width: 320px;
     height: 600px;
     margin-left: 50px;
 }

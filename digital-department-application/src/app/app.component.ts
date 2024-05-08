@@ -13,25 +13,45 @@ import { ItalicDirective } from './pages/home/italic.directive';
 
 @Component({
     selector: "my-app",
-    styles: `a {padding: 5px;
-      background-color: #c36f6f;
-      color: #000;
-      display: flex;
+    styles: `
+    // a {padding: 5px;
+    //   background-color: #c36f6f;
+    //   color: #000;
+    //   display: flex;
       
-    }
-    nav{ 
-      padding-bottom: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }`
+    // }
+    ul {
+      list-style-type: none;
+      margin-bottom: 15px;
+      padding: 5px;
+      overflow: hidden;
+      background-color: #c36f6f;
+  }
+  
+  li {
+      float: left;
+  }
+  
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
+  li a:hover {
+      background-color: #d14949;
+  }
+    `
     ,
     template: `<div>
-                    <nav>
-                        <a routerLink="">Главная</a>
-                        <a routerLink="/lipgloss">Блеск</a>
-                        <a routerLink="/foundation">Тон</a>
-                        <a routerLink="/shadows">Тени</a>
-                    </nav>
+                    <ul>
+                        <li><a routerLink="">Главная</a></li>
+                        <li><a routerLink="/lipgloss">Блеск</a></li>
+                        <li><a routerLink="/foundation">Тон</a></li>
+                        <li><a routerLink="/shadows">Тени</a></li>
+                    </ul>
                     <router-outlet></router-outlet>
               </div>
               `,

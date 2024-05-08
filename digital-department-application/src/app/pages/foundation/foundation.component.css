@@ -1,0 +1,40 @@
+.foundations {
+    background-color: rgb(224, 133, 133);
+    width: 500px;
+    padding-left: 50px;
+    margin-left: 70px;
+    margin-right: 50px;
+}
+
+.element {
+    padding: 10px;
+}
+
+.lofform {
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+.photos {
+    width: 320px;
+    height: 600px;
+    margin-left: 50px;
+}
+
+th {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: rgb(224, 133, 133);
+}
+h3{
+    color: rgb(226, 111, 111);
+    font-size: 40px;
+}
+
+p{
+    font-size: 40px;
+}

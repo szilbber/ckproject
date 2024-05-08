@@ -1,1 +1,66 @@
-<p>lipgloss works!</p>
+<div style="display: inline-flex;">
+    <img class="photos" src="assets/image1.jpg" alt="My Image">
+    <div class="lipgloss">
+        <form [formGroup]="myForm" (ngSubmit)="send()">
+
+            <p>Добавьте новый продукт: </p>
+            <div class="element">
+                <label class="lofform">Брэнд</label>
+                <input name="brand" formControlName="brand" />
+            </div>
+
+            <div class="element">
+                <label class="lofform">Сегмент</label>
+                <select formControlName="segmentControl">
+                    <option *ngFor="let segment of segments"
+                        [value]="segment.value">{{segment.label}}</option>
+                </select>
+
+            </div>
+
+            <div class="element">
+                <label class="lofform">Оттенок</label>
+                <input name="color" formControlName="color" />
+            </div>
+
+            <div class="element">
+                <label class="lofform">Водостойкость</label>
+                <label class="lofform">
+                    <input type="radio" value="yes"
+                        formControlName="radioControl"> Да
+                </label>
+                <label class="lofform">
+                    <input type="radio" value="no"
+                        formControlName="radioControl"> Нет
+                </label>
+            </div>
+
+            <div class="element">
+                <label class="lofform">Серийный номер</label>
+                <input name="series" formControlName="series" />
+            </div>
+
+            <button type="submit" [disabled]="myForm.invalid">Отправить</button>
+        </form>
+    </div>
+    <div>
+        <h3>Блески для губ:</h3>
+
+        <table border="1px" cellpadding="5" >
+            <tr>
+                <th>Брэнд</th>
+                <th>Оттенок</th>
+                <th>Сегмент</th>
+                <th>Водостойкость</th>
+                <th>Серийный номер</th>
+            </tr>
+            <tr *ngFor="let lipgloss of lipglosses">
+                <td>{{lipgloss.brand}}</td>
+                <td>{{lipgloss.color}}</td>
+                <td>{{lipgloss.segmentControl}}</td>
+                <td>{{lipgloss.radioControl}}</td>
+                <td>{{lipgloss.series}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
