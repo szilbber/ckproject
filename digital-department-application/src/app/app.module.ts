@@ -18,6 +18,9 @@ import { ReversePipe } from './core/pipes/reverse.pipe';
 import { Lab5Component } from './pages/lab5/lab5.component';
 import { ErrorInterceptor } from './core/interceptor/error.interceptor';
 import { Lab6Component } from './pages/lab6/lab6.component';
+import { LipglossComponent } from './pages/lipgloss/lipgloss.component';
+import { FoundationComponent } from './pages/foundation/foundation.component';
+import { ShadowsComponent } from './pages/shadows/shadows.component';
 // const appRoutes: Routes = [
 //     {path:'',component: HomeComponent},
 //     {path:'**', component: NotFoundComponent}
@@ -30,7 +33,10 @@ import { Lab6Component } from './pages/lab6/lab6.component';
     AppComponent,
     ReversePipe,
     Lab5Component,
-    Lab6Component
+    Lab6Component,
+    LipglossComponent,
+    FoundationComponent,
+    ShadowsComponent
 ],
     imports: [
     BrowserModule,

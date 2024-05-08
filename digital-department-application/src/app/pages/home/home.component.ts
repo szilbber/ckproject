@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
@@ -7,26 +8,21 @@ import { FormGroup } from '@angular/forms';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  users:any[] = [];
+  // constructor(private http: HttpClient) {}
 
-  myForm: FormGroup = new FormGroup({
-    "username": new FormControl('', Validators.required),
-    "watsup": new FormControl('', Validators.required)
-  });
-  constructor(){
-    this.onreInitForm();
-  }
-  onSubmit(){
-    //console.log(this.myForm.getRawValue());
-    this.users.push(this.myForm.getRawValue());
+  // onFileSelected(event: any) {
+  //   const file: File = event.target.files[0];
 
-  }
-  onreInitForm(){
-      this.myForm = new FormGroup({
-        "username": new FormControl('', Validators.required),
-        "watsup": new FormControl('', Validators.required)
-      });
-  }
+  //   if (file) {
+  //     const formData = new FormData();
+  //     formData.append('image', file, 'image1.jpg');
+
+  //     this.http.post('/api/upload', formData)
+  //       .subscribe(res => {
+  //         console.log(res);
+  //       });
+  //   }
+  // }
 }
 
 

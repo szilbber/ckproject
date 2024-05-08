@@ -1,3 +1,21 @@
 .italic {
     font-style: italic;
 }
+
+.name {
+    margin-left: 120px;
+    background-color: rgb(224, 133, 133);
+    width: 300px;
+    height: 250px;
+
+}
+
+.large-text {
+    font-size: 150px;
+}
+
+.photos{
+    width: 300px;
+    height: 600px;
+    margin-left: 50px;
+}
