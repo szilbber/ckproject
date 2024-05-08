@@ -42,12 +42,25 @@
 
             <button type="submit" [disabled]="myForm.invalid">Отправить</button>
         </form>
+        <!-- <div class="changes">
+            <div style="margin-bottom: 5px;">Введите номер продукта для изменения: </div>
+            <input name="numberToChange" id="numberToChange"/> 
+            <button (click)="changeObject(numberToChange)">Изменить</button>
+        </div> -->
+        <div class="changes">
+            <div style="margin-bottom: 5px;">Введите номер продукта для изменения: </div>
+            <input type="number" [(ngModel)]="numberToChange">
+            <button (click)="changeObject()">Изменить</button>
+
+        </div>
+
     </div>
     <div>
         <h3>Блески для губ:</h3>
 
-        <table border="1px" cellpadding="5" >
+        <table border="1px" cellpadding="5">
             <tr>
+                <th>№</th>
                 <th>Брэнд</th>
                 <th>Оттенок</th>
                 <th>Сегмент</th>
@@ -55,12 +68,14 @@
                 <th>Серийный номер</th>
             </tr>
             <tr *ngFor="let lipgloss of lipglosses">
+                <td>{{lipgloss.number}}</td>
                 <td>{{lipgloss.brand}}</td>
                 <td>{{lipgloss.color}}</td>
                 <td>{{lipgloss.segmentControl}}</td>
                 <td>{{lipgloss.radioControl}}</td>
                 <td>{{lipgloss.series}}</td>
             </tr>
+
         </table>
     </div>
 </div>

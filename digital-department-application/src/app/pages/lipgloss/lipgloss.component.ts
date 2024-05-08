@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -68,8 +68,12 @@ export class LipglossComponent {
   //   this.timeSubscription.unsubscribe();
   // }
 
-  // changeTask() {
-  //   this.myForm.controls['timeControl'].setValue(this.tasks[this.i - 2].timeControl);
-  //   this.tasks[this.i - 2] = (this.myForm.getRawValue());
-  // }
+  numberToChange: number = 1;
+  constructor() {}
+  changeObject() {
+    this.myForm.controls['number'].setValue(this.lipglosses[this.numberToChange-1].number);
+    this.lipglosses[this.numberToChange-1] = (this.myForm.getRawValue());
+  }
+
+
 }
