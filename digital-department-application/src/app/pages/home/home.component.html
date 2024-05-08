@@ -1,0 +1,25 @@
+<p>home works!</p>
+<div italic>Этот текст будет курсивным</div>
+<form [formGroup]="myForm"(ngSubmit)="onSubmit()">
+<div>
+    <label>Имя</label>
+    <input type="text" maxlength="20" name="userName" formControlName="username"/>
+</div>
+<div *ngIf="myForm.controls['username'].invalid && myForm.controls['username'].touched">
+    Не указано имя!
+</div>
+<div>
+    <label>Как дела?</label>
+    <input minlength="4" name="watsup" formControlName="watsup"/>
+</div>
+<div *ngIf="myForm.controls['watsup'].invalid && myForm.controls['watsup'].touched">
+    Не указано как дела!
+</div>
+<button type="submit"[disabled]="myForm.invalid">Отправить</button>
+</form>
+<div>
+    <h3>Пользователи</h3>
+    <ul>
+        <li *ngFor="let user of users">У {{user.username}} все {{user.watsup}} </li>
+    </ul>
+</div>

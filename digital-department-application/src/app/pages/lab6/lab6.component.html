@@ -1,0 +1,88 @@
+<p>lab6 works!</p>
+
+<div class="card">
+<form [formGroup]="myForm"(ngSubmit)="send()" >
+    <!-- <div>
+        <label>Номер</label>
+        <input name="number" formControlName="number"/>
+    </div>
+    <div *ngIf="myForm.controls['number'].invalid && myForm.controls['number'].touched">
+        Не указан номер!
+    </div> -->
+
+    <div class="element">
+        <label>Тип</label>
+        <label>
+            <input type="radio" value="bug" formControlName="radioControl"> Bug
+        </label>
+        <label>
+            <input type="radio" value="task" formControlName="radioControl"> Task
+        </label>
+    </div>
+
+    <div class="element">
+        <label>Приоритет</label>
+        <select formControlName="priorityControl">
+            <option *ngFor="let priority of prioritys" [value]="priority.value">{{priority.label}}</option>
+        </select>
+        
+    </div>
+
+    <div class="element">
+        <label>Статус</label>
+        <input name="status" formControlName="status"/>
+    </div>
+    <div *ngIf="myForm.controls['status'].invalid && myForm.controls['status'].touched">
+        Не указан Статус!
+    </div>
+
+    <div class="element">
+        <label>Заголовок</label>
+        <input name="title" formControlName="title"/>
+    </div>
+    <div *ngIf="myForm.controls['title'].invalid && myForm.controls['title'].touched">
+        Не указан Заголовок!
+    </div>
+
+    <div class="element">
+        <label>Описание</label>
+        <input name="description" formControlName="description"/>
+    </div>
+
+    <div class="element">
+        <label>Исполнитель</label>
+        <input name="man" formControlName="man"/>
+    </div>
+
+    <div class="element">
+        <label>Создатель</label>
+        <input name="creator" formControlName="creator"/>
+    </div>
+    <div *ngIf="myForm.controls['creator'].invalid && myForm.controls['creator'].touched">
+        Не указан Создатель!
+
+    </div>
+    <button type="submit"[disabled]="myForm.invalid">Отправить</button>
+    </form>
+</div>
+
+
+<div>
+    <h3>Задачи:</h3>
+    <!-- <ul>
+        <li *ngFor="let task of tasks">
+            {{task.number}} {{task.radioControl}} {{task.priorityControl}} {{task.status}} {{task.title}} {{task.description}} {{task.man}} </li>
+    </ul> -->
+    <!-- <div class="taskk" id="taskk"> -->
+    <div *ngFor="let task of tasks"> 
+        <div class="taskk" id="taskk">
+        Дата и время создания: {{task.timeControl}}<br>
+        Дата и время последнего изменения: {{task.timeChangeControl}}<br>
+        № {{task.number}} {{task.radioControl}} {{task.priorityControl}}<br>
+        {{task.status}} {{task.title}} {{task.description}}<br>
+        Исполнитель: {{task.man}}<br>
+        Создатель: {{task.creator}}<br>
+        <button type="submit"[disabled]="myForm.invalid" (click)="changeTask()">Поменять</button><br><br>
+    </div>
+    </div>
+</div>
